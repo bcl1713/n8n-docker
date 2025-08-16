@@ -14,6 +14,8 @@ services:
       - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
       - TZ=${GENERIC_TIMEZONE}
+      - PUID=1000
+      - PGID=1000
     volumes:
       - /mnt/TANK/docker/n8n/n8n_data:/home/node/.n8n
       - /mnt/TANK/docker/n8n/local-files:/files
